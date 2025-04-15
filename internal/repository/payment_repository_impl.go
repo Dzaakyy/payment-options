@@ -2,7 +2,7 @@ package repository
 
 import (
 	"payment-options/internal/models"
-	"time"
+	// "time"
 )
 
 type paymentRepo struct{}
@@ -11,57 +11,58 @@ func NewPaymentRepo() PaymentRepository {
 	return &paymentRepo{}
 }
 
-func (r *paymentRepo) CallOVO() models.PaymentMethod {
-	time.Sleep(2 * time.Second) // Simulate network delay
+func (r *paymentRepo) CallMobileBanking() models.PaymentMethod {
+	// time.Sleep(2 * time.Second) // Simulate network delay
 	return models.PaymentMethod{
-		Account: "6288xx",
+		Account: "MBANK123xxx",
 		Status:  "Active",
-		Balance: "10000",
-		Icon:    "https://sampleurl.com/ovo.jpg",
+		Amount: "1500000",
+		Icon:    "https://sampleurl.com/mobilebanking.png",
 	}
 }
 
-func (r *paymentRepo) CallDANA() models.PaymentMethod {
+func (r *paymentRepo) CallVirtualAccount() models.PaymentMethod {
 	return models.PaymentMethod{
-		Account: "6288xx",
+		Account: "VA987654xxx",
 		Status:  "Active",
-		Balance: "10000",
-		Icon:    "https://sampleurl.com/dana.jpg",
+		Amount: "110000",
+		Icon:    "https://sampleurl.com/virtualaccount.png",
 	}
 }
 
-func (r *paymentRepo) CallGoPay() models.PaymentMethod {
+func (r *paymentRepo) CallEWallet() models.PaymentMethod {
+	// time.Sleep(2 * time.Second)
 	return models.PaymentMethod{
-		Account: "6288xx",
+		Account: "EWALLETxxx",
 		Status:  "Active",
-		Balance: "10000",
-		Icon:    "https://sampleurl.com/gopay.jpg",
+		Amount: "300000",
+		Icon:    "https://sampleurl.com/ewallet.png",
 	}
 }
 
-func (r *paymentRepo) CallShopee() models.PaymentMethod {
+func (r *paymentRepo) CallInstallmentPlan() models.PaymentMethod {
 	return models.PaymentMethod{
-		Account: "6288xx",
+		Account: "INST123xxx",
 		Status:  "Active",
-		Balance: "10000",
-		Icon:    "https://sampleurl.com/shopee.jpg",
+		Amount: "210000",
+		Icon:    "https://sampleurl.com/installment.png",
 	}
 }
 
-func (r *paymentRepo) CallOneKlik() models.PaymentMethod {
+func (r *paymentRepo) CallGiftCard() models.PaymentMethod {
 	return models.PaymentMethod{
-		Account: "6288xx",
+		Account: "GIFT789xxx",
 		Status:  "Active",
-		Balance: "10000",
-		Icon:    "https://sampleurl.com/oneklik.jpg",
+		Amount: "220000",
+		Icon:    "https://sampleurl.com/giftcard.png",
 	}
 }
 
-func (r *paymentRepo) CallBRIDD() models.PaymentMethod {
+func (r *paymentRepo) CallDirectDebit() models.PaymentMethod {
 	return models.PaymentMethod{
-		Account: "6288xx",
+		Account: "DD45678xxx",
 		Status:  "Active",
-		Balance: "10000",
-		Icon:    "https://sampleurl.com/bridd.jpg",
+		Amount: "110000",
+		Icon:    "https://sampleurl.com/directdebit.png",
 	}
 }

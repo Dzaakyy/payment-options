@@ -3,6 +3,6 @@ package models
 type PaymentMethod struct {
 	Account string `json:"account"`
 	Status  string `json:"status"`
-	Balance string `json:"balance"`
+	Amount string `json:"amount"`
 	Icon    string `json:"icon"`
 }
