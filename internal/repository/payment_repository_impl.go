@@ -2,7 +2,7 @@ package repository
 
 import (
 	"payment-options/internal/models"
-	// "time"
+	"time"
 )
 
 type paymentRepo struct{}
@@ -12,7 +12,7 @@ func NewPaymentRepo() PaymentRepository {
 }
 
 func (r *paymentRepo) CallMobileBanking() models.PaymentMethod {
-	// time.Sleep(2 * time.Second) // Simulate network delay
+	time.Sleep(2 * time.Second) // Simulate network delay
 	return models.PaymentMethod{
 		Account: "MBANK123xxx",
 		Status:  "Active",
